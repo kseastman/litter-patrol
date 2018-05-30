@@ -35,14 +35,17 @@ class App extends Component {
     return bins;
   }
 
-  onTrashClicked = () => {
-    // Fill this in!
+  onTrashClicked = (index) => {
+    let incrementPoints = this.state.points + 1
+    this.setState({points: incrementPoints})
+    console.log(`Increment score because trash[${index}] was clicked`);
   }
 
   render() {
     const bins = this.state.bins.map((bin, index) => {
       return (
-        <Trash key={`trash-${index}`} isVisible={bin.isTrashVisible} />
+        <Trash key={`trash-${index}`} isVisible={bin.isTrashVisible} isClicked={this.onTrashClicked}
+        index={index} />
       );
     });
 
