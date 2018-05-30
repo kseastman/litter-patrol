@@ -27,6 +27,12 @@ body {
 .trash {
   width: 120px;
   height: 120px;
+  animation: trash-spin infinite 25s linear;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 25s linear;
+  height: 80px;
 }
 
 .overall-data {
@@ -36,4 +42,9 @@ body {
 .empty {
   width: 120px;
   height: 120px;
+}
+
+@keyframes trash-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

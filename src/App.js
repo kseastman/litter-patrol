@@ -50,7 +50,10 @@ class App extends Component {
   render() {
     const bins = this.state.bins.map((bin, index) => {
       return (
-        <Trash key={`trash-${index}`} isVisible={bin.isTrashVisible} isClicked={this.onTrashClicked}
+        <Trash
+        key={`trash-${index}`}
+        isVisible={bin.isTrashVisible}
+        isClicked={this.onTrashClicked}
         isEmptyClicked={this.onEmptyClicked}
         index={index} />
       );
