@@ -32,3 +32,8 @@ body {
 .overall-data {
   color: #FEFAE0;
 }
+
+.empty {
+  width: 120px;
+  height: 120px;
+}

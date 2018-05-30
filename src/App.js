@@ -41,10 +41,17 @@ class App extends Component {
     console.log(`Increment score because trash[${index}] was clicked`);
   }
 
+  onEmptyClicked = (index) => {
+    let decrementPoints = this.state.points - 1
+    this.setState({points: decrementPoints})
+    console.log((`Decrement score because empty trash[${index}] was clicked`));
+  }
+
   render() {
     const bins = this.state.bins.map((bin, index) => {
       return (
         <Trash key={`trash-${index}`} isVisible={bin.isTrashVisible} isClicked={this.onTrashClicked}
+        isEmptyClicked={this.onEmptyClicked}
         index={index} />
       );
     });

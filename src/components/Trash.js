@@ -12,11 +12,16 @@ class Trash extends Component {
 
   onTrashClicked = () => {
     console.log("Got a click");
-    this.props.isClicked(this.props.index)
+    this.props.isClicked(this.props.index);
+  }
+
+  onEmptyClicked = () => {
+    console.log("Got a click");
+    this.props.isEmptyClicked(this.props.index);
   }
 
   render() {
-    let trashIcon = null;
+    let trashIcon = <div className="empty" onClick={this.onEmptyClicked}></div>;
     if (this.props.isVisible) {
       trashIcon = <img src={ TrashIcon } alt="Trash" className="trash" onClick={this.onTrashClicked}/>
     }
