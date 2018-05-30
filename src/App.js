@@ -14,6 +14,8 @@ class App extends Component {
     console.log(this.state.bins);
   }
 
+
+// Uses setInterval to update the code every 1.5 seconds, and set the state based on a function call to getBinsState
   startGame() {
     setInterval(() => {
       this.setState( {
@@ -22,6 +24,8 @@ class App extends Component {
     }, 1500);
   }
 
+
+// Sets a variable for bins equal to an empty array, then loops through selecting a random float less than 1, then rounds up to one.  If it is not zero, aka, it can round up, it returns true, otherwise it returns false.
   getBinsState() {
     let bins = [];
     for (let i = 0; i < 9; i++){
