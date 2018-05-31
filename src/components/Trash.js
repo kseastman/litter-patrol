@@ -5,6 +5,9 @@ import '../App.css';
 import TrashIcon from '../trash.svg';
 import RedApple from '../red-apple-core.svg'
 import GreenApple from '../green-apple-core.svg'
+import FishBones from '../fishbones.svg'
+import BananaPeel from '../banana.svg'
+import DoubleRed from '../doubleredapple.svg'
 
 class Trash extends Component {
   static propTypes = {
@@ -23,7 +26,7 @@ class Trash extends Component {
   }
 
   render() {
-    const trashImages = [TrashIcon, RedApple, GreenApple]
+    const trashImages = [TrashIcon, RedApple, GreenApple, FishBones, BananaPeel, DoubleRed]
     let trashIcon = <div className="empty" onClick={this.onEmptyClicked}></div>;
     if (this.props.isVisible) {
       let image = trashImages[Math.floor(Math.random() * trashImages.length)]
